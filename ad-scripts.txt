@@ -1,0 +1,84 @@
+# Ad Scripts for QRZen Pro
+# These are the ad scripts that were in the original ads.txt file
+
+# Banner 300x250
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2bd74ef6b3d861eeaafa5a92156d7c01',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/2bd74ef6b3d861eeaafa5a92156d7c01/invoke.js"></script>
+
+# Banner 728x90
+<script type="text/javascript">
+	atOptions = {
+		'key' : '5125b7bd589f58b1a252b20be61925f3',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/5125b7bd589f58b1a252b20be61925f3/invoke.js"></script>
+
+# Banner 160x600
+<script type="text/javascript">
+	atOptions = {
+		'key' : '0f8efc4276aec43d3b8fb0e5352229f2',
+		'format' : 'iframe',
+		'height' : 600,
+		'width' : 160,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/0f8efc4276aec43d3b8fb0e5352229f2/invoke.js"></script>
+
+# Banner 160x300
+<script type="text/javascript">
+	atOptions = {
+		'key' : '8920e6be7b3c4d447825469c76f5cd03',
+		'format' : 'iframe',
+		'height' : 300,
+		'width' : 160,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/8920e6be7b3c4d447825469c76f5cd03/invoke.js"></script>
+
+# Banner 468x60
+<script type="text/javascript">
+	atOptions = {
+		'key' : '9333bd4b4b27a7001e433199ee65afe4',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/9333bd4b4b27a7001e433199ee65afe4/invoke.js"></script>
+
+# Direct Link
+https://www.profitableratecpm.com/ue7edqkrz?key=ec4ea33cdd43fd3bb6b62a63e138f4e3
+
+# Social Bar
+<script type='text/javascript' src='//pl27195670.profitableratecpm.com/9e/9c/b3/9e9cb3f126c530ff3e5a7b54cbe90e6a.js'></script>
+
+# Banner 320x50
+<script type="text/javascript">
+	atOptions = {
+		'key' : '579a9f8b87b2218fdce51d30ea187e65',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/579a9f8b87b2218fdce51d30ea187e65/invoke.js"></script>
+
+# Native Banner
+<script async="async" data-cfasync="false" src="//pl27191491.profitableratecpm.com/8fd590db0da4fe1df46c9a9f297ff25a/invoke.js"></script>
+<div id="container-8fd590db0da4fe1df46c9a9f297ff25a"></div>

@@ -1,0 +1,274 @@
+/* Ad Integration Styles for QRZen Pro */
+
+/* General Ad Container Styles */
+.ad-container {
+    margin: 20px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.ad-container:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.ad-label {
+    font-size: 10px;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* Responsive Ad Sizes */
+.ad-banner-large {
+    max-width: 728px;
+    height: 90px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.ad-banner-medium {
+    max-width: 468px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+.ad-banner-small {
+    max-width: 320px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+.ad-rectangle {
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.ad-skyscraper {
+    width: 160px;
+    height: 600px;
+    padding: 10px;
+    position: sticky;
+    top: 20px;
+}
+
+.ad-square {
+    width: 160px;
+    height: 300px;
+    padding: 10px;
+}
+
+/* Ad Placement Styles */
+.ad-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.ad-sidebar {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.ad-footer {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 2px solid #e9ecef;
+}
+
+.ad-inline {
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+}
+
+.ad-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    background: white;
+}
+
+/* Native Ad Styles */
+.ad-native {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 25px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+}
+
+.ad-native h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.ad-native p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.ad-native .ad-cta {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.ad-native .ad-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ad-sidebar {
+        display: none;
+    }
+    
+    .ad-banner-large {
+        max-width: 320px;
+        height: 50px;
+    }
+    
+    .ad-banner-medium {
+        max-width: 320px;
+        height: 50px;
+    }
+    
+    .ad-rectangle {
+        max-width: 300px;
+        height: 250px;
+    }
+    
+    .ad-floating {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        width: auto;
+    }
+    
+    .ad-skyscraper {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .ad-container {
+        margin: 15px 0;
+        padding: 10px;
+    }
+    
+    .ad-inline {
+        margin: 20px 0;
+        padding: 15px;
+    }
+    
+    .ad-native {
+        padding: 15px;
+        margin: 20px 0;
+    }
+}
+
+/* Loading Animation */
+.ad-loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Ad Close Button */
+.ad-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.ad-close:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+/* Performance Optimizations */
+.ad-container iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.ad-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Accessibility */
+.ad-container[aria-hidden="true"] {
+    display: none;
+}
+
+.ad-container:focus-within {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .ad-container,
+    .ad-sidebar,
+    .ad-floating {
+        display: none !important;
+    }
+}
