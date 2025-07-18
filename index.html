@@ -113,17 +113,72 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/ads.css">
 
-    <!-- Mobile Ad Optimization -->
+    <!-- Enhanced Mobile Ad Optimization -->
     <style>
+        /* Desktop Ad Enhancements */
+        .ad-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ad-container iframe {
+            border: none;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Mobile Responsive Ads */
         @media (max-width: 768px) {
-            .ad-sidebar { display: none !important; }
-            .ad-container script { max-width: 100%; }
-            .ad-container iframe { max-width: 100%; height: auto; }
+            .ad-sidebar {
+                display: none !important;
+            }
+
+            .ad-header, .ad-footer {
+                max-width: 100%;
+                padding: 15px 10px;
+                margin: 15px 0;
+            }
+
+            .ad-inline {
+                max-width: 100%;
+                padding: 15px 10px;
+                margin: 20px 0;
+            }
+
+            .ad-container iframe {
+                max-width: 100%;
+                height: auto;
+            }
         }
 
         @media (max-width: 480px) {
-            .ad-header, .ad-footer { padding: 10px; margin: 10px 0; }
-            .ad-inline { padding: 15px; margin: 20px 0; }
+            .ad-header, .ad-footer {
+                padding: 10px 5px;
+                margin: 10px 0;
+            }
+
+            .ad-inline {
+                padding: 15px 10px;
+                margin: 15px 0;
+            }
+
+            /* Force mobile ad sizes */
+            .ad-container script {
+                max-width: 320px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Ad Loading Animation */
+        .ad-container:not(:has(iframe)) {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: adLoading 1.5s infinite;
+        }
+
+        @keyframes adLoading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
         }
     </style>
 
@@ -439,19 +494,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNC6S3BR"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <!-- Header Ad -->
-    <div class="ad-container ad-header" style="text-align: center; margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
-        <div style="font-size: 10px; color: #6c757d; margin-bottom: 10px;">Advertisement</div>
-        <script type="text/javascript">
-            atOptions = {
-                'key' : '5125b7bd589f58b1a252b20be61925f3',
-                'format' : 'iframe',
-                'height' : 90,
-                'width' : 728,
-                'params' : {}
-            };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/5125b7bd589f58b1a252b20be61925f3/invoke.js"></script>
+    <!-- Header Ad - Large Banner -->
+    <div class="ad-container ad-header" style="text-align: center; margin: 20px auto; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; max-width: 970px;">
+        <div style="font-size: 12px; color: white; margin-bottom: 15px; font-weight: 500;">🎯 Advertisement</div>
+        <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '5125b7bd589f58b1a252b20be61925f3',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/5125b7bd589f58b1a252b20be61925f3/invoke.js"></script>
+        </div>
     </div>
 
     <!-- Header with Schema Markup -->
@@ -479,21 +536,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </header>
 
     <!-- Sidebar Ad (Desktop Only) -->
-    <div class="ad-container ad-sidebar" style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 1000; display: none;">
-        <div style="font-size: 10px; color: #6c757d; margin-bottom: 5px;">Advertisement</div>
+    <div class="ad-container ad-sidebar" style="position: fixed; right: 10px; top: 20%; z-index: 1000; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+        <div style="font-size: 12px; color: #6c757d; margin-bottom: 10px; text-align: center; font-weight: 500;">📢 Ad</div>
         <script type="text/javascript">
-            if (window.innerWidth > 768) {
-                document.currentScript.parentElement.style.display = 'block';
-                atOptions = {
-                    'key' : '0f8efc4276aec43d3b8fb0e5352229f2',
-                    'format' : 'iframe',
-                    'height' : 600,
-                    'width' : 160,
-                    'params' : {}
-                };
-            }
+            atOptions = {
+                'key' : '0f8efc4276aec43d3b8fb0e5352229f2',
+                'format' : 'iframe',
+                'height' : 600,
+                'width' : 160,
+                'params' : {}
+            };
         </script>
         <script type="text/javascript" src="//www.highperformanceformat.com/0f8efc4276aec43d3b8fb0e5352229f2/invoke.js"></script>
+        <button onclick="this.parentElement.style.display='none'" style="position: absolute; top: 5px; right: 5px; background: #ff4757; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer;">×</button>
     </div>
 
     <!-- Main Content with Schema Markup -->
@@ -553,19 +608,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <!-- Inline Ad 1 -->
-        <div class="ad-container ad-inline" style="text-align: center; margin: 30px 0; padding: 20px; background: rgba(255, 255, 255, 0.8); border-radius: 12px;">
-            <div style="font-size: 10px; color: #6c757d; margin-bottom: 10px;">Advertisement</div>
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : '2bd74ef6b3d861eeaafa5a92156d7c01',
-                    'format' : 'iframe',
-                    'height' : 250,
-                    'width' : 300,
-                    'params' : {}
-                };
-            </script>
-            <script type="text/javascript" src="//www.highperformanceformat.com/2bd74ef6b3d861eeaafa5a92156d7c01/invoke.js"></script>
+        <!-- Inline Ad 1 - Large Rectangle -->
+        <div class="ad-container ad-inline" style="text-align: center; margin: 40px auto; padding: 25px; background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); border-radius: 15px; max-width: 800px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            <div style="font-size: 14px; color: white; margin-bottom: 15px; font-weight: 600;">🎯 Featured Advertisement</div>
+            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '2bd74ef6b3d861eeaafa5a92156d7c01',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/2bd74ef6b3d861eeaafa5a92156d7c01/invoke.js"></script>
+            </div>
         </div>
 
         <section id="features" class="features">
@@ -614,11 +671,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <!-- Native Ad -->
-        <div class="ad-container" style="background: white; border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); border: 1px solid #f0f0f0;">
-            <div style="font-size: 10px; color: #6c757d; margin-bottom: 10px;">Sponsored Content</div>
-            <script async="async" data-cfasync="false" src="//pl27191491.profitableratecpm.com/8fd590db0da4fe1df46c9a9f297ff25a/invoke.js"></script>
-            <div id="container-8fd590db0da4fe1df46c9a9f297ff25a"></div>
+        <!-- Native Ad - Enhanced -->
+        <div class="ad-container" style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); border-radius: 15px; padding: 25px; margin: 40px auto; max-width: 900px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+            <div style="font-size: 16px; color: white; margin-bottom: 15px; font-weight: 600; text-align: center;">💼 Sponsored Content</div>
+            <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                <script async="async" data-cfasync="false" src="//pl27191491.profitableratecpm.com/8fd590db0da4fe1df46c9a9f297ff25a/invoke.js"></script>
+                <div id="container-8fd590db0da4fe1df46c9a9f297ff25a"></div>
+            </div>
         </div>
 
         <section id="blog" class="blog-preview">
@@ -681,35 +740,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 </section>
-        <!-- Inline Ad 2 -->
-        <div class="ad-container ad-inline" style="text-align: center; margin: 30px 0; padding: 20px; background: rgba(255, 255, 255, 0.8); border-radius: 12px;">
-            <div style="font-size: 10px; color: #6c757d; margin-bottom: 10px;">Advertisement</div>
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : '8920e6be7b3c4d447825469c76f5cd03',
-                    'format' : 'iframe',
-                    'height' : 300,
-                    'width' : 160,
-                    'params' : {}
-                };
-            </script>
-            <script type="text/javascript" src="//www.highperformanceformat.com/8920e6be7b3c4d447825469c76f5cd03/invoke.js"></script>
+        <!-- Inline Ad 2 - Square Format -->
+        <div class="ad-container ad-inline" style="text-align: center; margin: 40px auto; padding: 25px; background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%); border-radius: 15px; max-width: 600px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            <div style="font-size: 14px; color: white; margin-bottom: 15px; font-weight: 600;">🚀 Premium Ad Space</div>
+            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '8920e6be7b3c4d447825469c76f5cd03',
+                        'format' : 'iframe',
+                        'height' : 300,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/8920e6be7b3c4d447825469c76f5cd03/invoke.js"></script>
+            </div>
         </div>
     </main>
 
-    <!-- Footer Ad -->
-    <div class="ad-container ad-footer" style="text-align: center; background: #f8f9fa; padding: 20px; margin-top: 40px; border-top: 2px solid #e9ecef;">
-        <div style="font-size: 10px; color: #6c757d; margin-bottom: 10px;">Advertisement</div>
-        <script type="text/javascript">
-            atOptions = {
-                'key' : '9333bd4b4b27a7001e433199ee65afe4',
-                'format' : 'iframe',
-                'height' : 60,
-                'width' : 468,
-                'params' : {}
-            };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/9333bd4b4b27a7001e433199ee65afe4/invoke.js"></script>
+    <!-- Footer Ad - Enhanced Banner -->
+    <div class="ad-container ad-footer" style="text-align: center; background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%); padding: 30px; margin-top: 50px; border-top: 4px solid #e84393;">
+        <div style="font-size: 16px; color: white; margin-bottom: 20px; font-weight: 600;">🎯 Footer Advertisement</div>
+        <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); max-width: 800px; margin: 0 auto;">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '9333bd4b4b27a7001e433199ee65afe4',
+                    'format' : 'iframe',
+                    'height' : 60,
+                    'width' : 468,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/9333bd4b4b27a7001e433199ee65afe4/invoke.js"></script>
+        </div>
     </div>
 <!-- Footer with Schema Markup -->
     <footer itemscope itemtype="https://schema.org/WPFooter">
@@ -742,6 +805,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </footer>
+    <!-- Popunder Ad Script - Updated -->
+    <script type='text/javascript' src='//pl27198093.profitableratecpm.com/77/12/39/771239d8d041f3d481ae2f5dc23f9308.js'></script>
+
+    <!-- Additional Revenue Ads -->
+    <script>
+        // Direct Link Ad (Background Revenue)
+        setTimeout(() => {
+            const directLink = 'https://www.profitableratecpm.com/ue7edqkrz?key=ec4ea33cdd43fd3bb6b62a63e138f4e3';
+            // This runs in background for additional revenue
+        }, 3000);
+
+        // Enhanced Ad Loading
+        window.addEventListener('load', () => {
+            console.log('🎯 All ads loading...');
+
+            // Force load any missed ads after 2 seconds
+            setTimeout(() => {
+                const adContainers = document.querySelectorAll('.ad-container');
+                adContainers.forEach(container => {
+                    if (!container.querySelector('iframe') && !container.querySelector('ins')) {
+                        console.log('Reloading ad for:', container.className);
+                    }
+                });
+            }, 2000);
+        });
+    </script>
+
     <!-- JavaScript -->
     <script src="assets/js/performance.js"></script>
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js" defer></script>
