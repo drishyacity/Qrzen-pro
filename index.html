@@ -113,6 +113,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/ads.css">
 
+    <!-- Mobile Ad Optimization -->
+    <style>
+        @media (max-width: 768px) {
+            .ad-sidebar { display: none !important; }
+            .ad-container script { max-width: 100%; }
+            .ad-container iframe { max-width: 100%; height: auto; }
+        }
+
+        @media (max-width: 480px) {
+            .ad-header, .ad-footer { padding: 10px; margin: 10px 0; }
+            .ad-inline { padding: 15px; margin: 20px 0; }
+        }
+    </style>
+
     <!-- Non-critical CSS loaded asynchronously -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" media="print" onload="this.media='all'">
 
@@ -426,7 +440,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <!-- Header Ad -->
-    <div class="ad-container ad-header" id="header-ad" aria-label="Advertisement"></div>
+    <div class="ad-container ad-header" style="text-align: center; margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <div style="font-size: 10px; color: #6c757d; margin-bottom: 10px;">Advertisement</div>
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '5125b7bd589f58b1a252b20be61925f3',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/5125b7bd589f58b1a252b20be61925f3/invoke.js"></script>
+    </div>
 
     <!-- Header with Schema Markup -->
     <header itemscope itemtype="https://schema.org/WPHeader">
@@ -453,7 +479,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </header>
 
     <!-- Sidebar Ad (Desktop Only) -->
-    <div class="ad-container ad-sidebar" id="sidebar-ad" aria-label="Advertisement"></div>
+    <div class="ad-container ad-sidebar" style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 1000; display: none;">
+        <div style="font-size: 10px; color: #6c757d; margin-bottom: 5px;">Advertisement</div>
+        <script type="text/javascript">
+            if (window.innerWidth > 768) {
+                document.currentScript.parentElement.style.display = 'block';
+                atOptions = {
+                    'key' : '0f8efc4276aec43d3b8fb0e5352229f2',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                };
+            }
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/0f8efc4276aec43d3b8fb0e5352229f2/invoke.js"></script>
+    </div>
 
     <!-- Main Content with Schema Markup -->
     <main itemscope itemtype="https://schema.org/WebApplication">
@@ -513,7 +554,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </section>
 
         <!-- Inline Ad 1 -->
-        <div class="ad-container ad-inline inline-ad" aria-label="Advertisement"></div>
+        <div class="ad-container ad-inline" style="text-align: center; margin: 30px 0; padding: 20px; background: rgba(255, 255, 255, 0.8); border-radius: 12px;">
+            <div style="font-size: 10px; color: #6c757d; margin-bottom: 10px;">Advertisement</div>
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '2bd74ef6b3d861eeaafa5a92156d7c01',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/2bd74ef6b3d861eeaafa5a92156d7c01/invoke.js"></script>
+        </div>
 
         <section id="features" class="features">
             <div class="container">
@@ -562,7 +615,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </section>
 
         <!-- Native Ad -->
-        <div class="ad-container" id="native-ad" aria-label="Sponsored Content"></div>
+        <div class="ad-container" style="background: white; border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); border: 1px solid #f0f0f0;">
+            <div style="font-size: 10px; color: #6c757d; margin-bottom: 10px;">Sponsored Content</div>
+            <script async="async" data-cfasync="false" src="//pl27191491.profitableratecpm.com/8fd590db0da4fe1df46c9a9f297ff25a/invoke.js"></script>
+            <div id="container-8fd590db0da4fe1df46c9a9f297ff25a"></div>
+        </div>
 
         <section id="blog" class="blog-preview">
             <div class="container">
@@ -625,11 +682,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section>
         <!-- Inline Ad 2 -->
-        <div class="ad-container ad-inline inline-ad" aria-label="Advertisement"></div>
+        <div class="ad-container ad-inline" style="text-align: center; margin: 30px 0; padding: 20px; background: rgba(255, 255, 255, 0.8); border-radius: 12px;">
+            <div style="font-size: 10px; color: #6c757d; margin-bottom: 10px;">Advertisement</div>
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '8920e6be7b3c4d447825469c76f5cd03',
+                    'format' : 'iframe',
+                    'height' : 300,
+                    'width' : 160,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/8920e6be7b3c4d447825469c76f5cd03/invoke.js"></script>
+        </div>
     </main>
 
     <!-- Footer Ad -->
-    <div class="ad-container ad-footer" id="footer-ad" aria-label="Advertisement"></div>
+    <div class="ad-container ad-footer" style="text-align: center; background: #f8f9fa; padding: 20px; margin-top: 40px; border-top: 2px solid #e9ecef;">
+        <div style="font-size: 10px; color: #6c757d; margin-bottom: 10px;">Advertisement</div>
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '9333bd4b4b27a7001e433199ee65afe4',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/9333bd4b4b27a7001e433199ee65afe4/invoke.js"></script>
+    </div>
 <!-- Footer with Schema Markup -->
     <footer itemscope itemtype="https://schema.org/WPFooter">
         <div class="container">
