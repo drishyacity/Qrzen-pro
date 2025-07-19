@@ -21,6 +21,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="description" content="Free Online QR Code Generator - Create custom QR codes for URLs, text, contacts, WiFi and more. No registration required. Download in high quality PNG, SVG or EPS formats instantly.">
     <meta name="keywords" content="QR code generator, free QR code, create QR code, QR code maker, digital QR code, business QR code, custom QR codes, QR generator online, barcode generator, vCard QR code, WiFi QR code, URL shortener">
     <meta name="author" content="Viraj Singh">
@@ -98,7 +101,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Preload Critical Resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="assets/css/style.css?v=1.1" as="style">
+    <link rel="preload" href="assets/css/style.css?v=2.0" as="style">
     <link rel="preload" href="logo.jpg" as="image">
 
     <!-- Fallback for preloaded stylesheets -->
@@ -110,8 +113,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <title>QRZen Pro | Free Online QR Code Generator - Create Custom QR Codes</title>
     
     <!-- Critical CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=1.1">
-    <link rel="stylesheet" href="assets/css/ads.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=2.0">
+    <link rel="stylesheet" href="assets/css/ads.css?v=2.0">
 
     <!-- Enhanced Mobile Ad Optimization -->
     <style>
@@ -861,11 +864,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
     </script>
 
+    <!-- Cache Busting Script -->
+    <script>
+        // Force cache refresh for better user experience
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for(let registration of registrations) {
+                    registration.unregister();
+                }
+            });
+        }
+
+        // Add timestamp to prevent caching issues
+        window.addEventListener('load', function() {
+            const timestamp = new Date().getTime();
+            console.log('Page loaded with timestamp:', timestamp);
+        });
+    </script>
+
     <!-- JavaScript -->
-    <script src="assets/js/performance.js"></script>
+    <script src="assets/js/performance.js?v=2.0"></script>
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js" defer></script>
-    <script src="assets/js/script.js" defer></script>
-    <script src="assets/js/ads.js" defer></script>
+    <script src="assets/js/script.js?v=2.0" defer></script>
+    <script src="assets/js/ads.js?v=2.0" defer></script>
       
    
 </body>
