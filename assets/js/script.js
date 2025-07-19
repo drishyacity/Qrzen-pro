@@ -276,7 +276,8 @@ document.addEventListener('DOMContentLoaded', function () {
             height: parseInt(qrSize.value),
             colorDark: qrColor.value,
             colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.H
+            correctLevel: QRCode.CorrectLevel.H,
+            margin: 4
         });
 
         downloadPNG.disabled = false;
@@ -291,11 +292,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function downloadPNGHandler() {
         if (!currentQR) return;
-        const canvas = qrCode.querySelector('canvas');
-        if (!canvas) return alert('No QR code found');
+        const originalCanvas = qrCode.querySelector('canvas');
+        if (!originalCanvas) return alert('No QR code found');
+
+        // Create a new canvas with extra white border for better scanning
+        const tempCanvas = document.createElement('canvas');
+        const tempCtx = tempCanvas.getContext('2d');
+
+        // Add extra border (20px on each side)
+        const borderSize = 20;
+        tempCanvas.width = originalCanvas.width + (borderSize * 2);
+        tempCanvas.height = originalCanvas.height + (borderSize * 2);
+
+        // Fill with white background
+        tempCtx.fillStyle = '#FFFFFF';
+        tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+
+        // Draw the original QR code in the center
+        tempCtx.drawImage(originalCanvas, borderSize, borderSize);
+
+        // Download the enhanced QR code
         const link = document.createElement('a');
         link.download = 'qr-code.png';
-        link.href = canvas.toDataURL('image/png');
+        link.href = tempCanvas.toDataURL('image/png');
         link.click();
     }
 
